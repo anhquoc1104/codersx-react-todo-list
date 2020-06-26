@@ -9,7 +9,7 @@ class TodoList extends Component {
         <ul>
           {
             todos.map((elm, index)=>{
-              return <li key={index}>{elm}</li>
+              return (<li key={index}>{elm}</li>)
             })
           }
         </ul>

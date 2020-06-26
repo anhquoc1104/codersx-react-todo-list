@@ -2,10 +2,21 @@ import React, { Component } from 'react';
 
 class Menu extends Component {
   render() {
+    let menu = this.props.menu;
     return (
       <div className="container d-flex flex-column align-items-center justify-content-center">
         <div className="row">
-          <div className="col border border-success d-flex flex-column align-items-center justify-content-center">
+          {
+            menu.map((elm, index) => {
+              return (
+                <div className="col d-flex flex-column align-items-center justify-content-center" key={index}>
+                  <i className={elm.icon} />
+                  <p className="m-0">{elm.label}</p>
+                </div>
+              )
+            })
+          }
+          {/* <div className="col border border-success d-flex flex-column align-items-center justify-content-center">
             <i className="fas fa-home" />
             <p className="m-0">HOME</p>
           </div>
@@ -24,7 +35,7 @@ class Menu extends Component {
           <div className="col d-flex flex-column align-items-center justify-content-center">
             <i className="fas fa-cog" />
             <p className="m-0">SETTINGS</p>
-          </div>
+          </div> */}
         </div>
       </div>
     );
