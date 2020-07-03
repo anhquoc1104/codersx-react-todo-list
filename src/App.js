@@ -8,16 +8,16 @@ import Menu from './components/menu';
 
 function App() {
   let menu = [
-    {icon: "fas fa-home", label: 'HOME'},
-    {icon: "fas fa-gift", label: 'DEALS'},
-    {icon: "fas fa-cloud-upload-alt", label: 'UPLOAD'},
-    {icon: "fas fa-mug-hot", label: 'WORK'},
-    {icon: "fas fa-cog", label: 'SETTINGS'}
+    {icon: "flaticon-sydney-opera-house", label: 'HOME'},
+    {icon: "flaticon-gift", label: 'DEALS'},
+    {icon: "flaticon-server", label: 'UPLOAD'},
+    {icon: "flaticon-work", label: 'WORK'},
+    {icon: "flaticon-gear", label: 'SETTINGS'}
   ]
   return (
     <div className="App">
       {/* <header className="App-header"></header> */}
-      {/* <Login /> */}
+      {/* <Login email="amin@gmail.com"/> */}
       <Menu menu={menu}/>
       {/* <TodoList /> */}
     </div>
