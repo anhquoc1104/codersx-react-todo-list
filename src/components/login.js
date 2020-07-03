@@ -13,13 +13,13 @@ class Login extends Component{
           <a href="#">go back</a>
           <button className="btn btn-success">Sign up</button>
         </div>
-      </div>
+      </div>  
       <div className="row w-50">
         <div className="col">
           <form method="get" action>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input id="email" className="form-control" type="email" name value={this.props.email} />
+              <input id="email" className="form-control" type="email" name />
             </div>
             <div className="form-group">
               <label htmlFor="password">password</label>
