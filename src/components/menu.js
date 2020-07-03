@@ -1,41 +1,31 @@
 import React, { Component } from 'react';
+import './Menu.css'
 
 class Menu extends Component {
   render() {
-    let menu = this.props.menu;
+    let {menu, hasUnread } = this.props;
+    let classIcon = "far fa-bell"
+    if(hasUnread) classIcon += " icon__notify";
     return (
-      <div className="container d-flex flex-column align-items-center justify-content-center">
+      <div className="header__menu container-fluid p-2">
         <div className="row">
-          {
-            menu.map((elm, index) => {
-              return (
-                <div className="col d-flex flex-column align-items-center justify-content-center" key={index}>
-                  <i className={elm.icon} />
-                  <p className="m-0">{elm.label}</p>
-                </div>
-              )
-            })
-          }
-          {/* <div className="col border border-success d-flex flex-column align-items-center justify-content-center">
-            <i className="fas fa-home" />
-            <p className="m-0">HOME</p>
+          <div className="col d-flex">
+            {
+              menu.map((elm, index) => {
+                return (
+                  <div className="col d-flex flex-column align-items-center justify-content-center" key={index}>
+                    <i className={elm.icon} />
+                    <p className="m-0">{elm.label}</p>
+                  </div>
+                )
+              })
+            }
           </div>
-          <div className="col d-flex flex-column align-items-center justify-content-center">
-            <i className="fas fa-gift" />
-            <p className="m-0">DEALS</p>
+          <div className="col d-flex justify-content-end">
+            <div className="header__notify pt-1 mr-5">
+              <i className={classIcon}></i>
+            </div>
           </div>
-          <div className="col d-flex flex-column align-items-center justify-content-center">
-            <i className="fas fa-cloud-upload-alt" />
-            <p className="m-0">UPLOAD</p>
-          </div>
-          <div className="col d-flex flex-column align-items-center justify-content-center">
-            <i className="fas fa-mug-hot" />
-            <p className="m-0">WORK</p>
-          </div>
-          <div className="col d-flex flex-column align-items-center justify-content-center">
-            <i className="fas fa-cog" />
-            <p className="m-0">SETTINGS</p>
-          </div> */}
         </div>
       </div>
     );

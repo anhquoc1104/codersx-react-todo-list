@@ -3,22 +3,23 @@ import logo from './logo.svg';
 import './App.css';
 import './components/TodoList'
 import TodoList from './components/TodoList';
-import Login from './components/login';
-import Menu from './components/menu';
+import Login from './components/Login';
+import Menu from './components/Menu';
 
 function App() {
   let menu = [
-    {icon: "flaticon-sydney-opera-house", label: 'HOME'},
-    {icon: "flaticon-gift", label: 'DEALS'},
-    {icon: "flaticon-server", label: 'UPLOAD'},
-    {icon: "flaticon-work", label: 'WORK'},
-    {icon: "flaticon-gear", label: 'SETTINGS'}
-  ]
+    {icon: "fas fa-home", label: 'HOME'},
+    {icon: "fas fa-gift", label: 'DEALS'},
+    {icon: "fas fa-cloud-upload-alt", label: 'UPLOAD'},
+    {icon: "fas fa-mug-hot", label: 'WORK'},
+    {icon: "fas fa-cog", label: 'SETTINGS'}
+  ];
+  let hasUnread = true;
   return (
     <div className="App">
       {/* <header className="App-header"></header> */}
       {/* <Login email="amin@gmail.com"/> */}
-      <Menu menu={menu}/>
+      <Menu menu={menu} hasUnread={hasUnread} />
       {/* <TodoList /> */}
     </div>
   );
